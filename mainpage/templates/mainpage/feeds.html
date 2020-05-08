@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Dastarkhan</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+
+  </head>
+<body>
+
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="/main" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="/management" role="tab" aria-controls="nav-profile" aria-selected="false">Menu</a>
+    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="/contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+    <a class="nav-item nav-link" id="nav-userlist-tab" data-toggle="tab" href="/waitlist" role="tab" aria-controls="nav-userlist" aria-selected="false">User list</a>
+  </div>
+</nav>
+<!--<a href="/main" class="logotype1">-->
+    <!--<div><b>Dastarkhan</b>Aka</div>-->
+    <!--<span>создание логотипов</span>-->
+<!--</a>-->
+
+ <!--<div class="logo">-->
+ <!--<img src="https://banner2.cleanpng.com/20180419/wsq/kisspng-restaurant-foodservice-chef-cafeteria-logo-restaurant-5ad8f916dde317.8702746315241689829089.jpg?sfvrsn=0" alt="CRED" class="logo"/>-->
+		<!--</div>-->
+    <br>
+    <div class="container">
+<div class="row">
+
+   <table class="table table-dark">
+      <thead>
+        <h1>User list </h1>
+        <tr>
+          <th scope="col">№</th>
+          <th scope="col">Person's NAME:</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Description</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in data %}
+            <tr>
+               <th scope="row">{{item.id}}</th>
+              <td>{{ forloop.counter }} - {{ item.name }}</td>
+              <td>{{ item.phone}}</td>
+              <td>{{item.description}}</td>
+              <td>{{item.email}}</td>
+            </tr>
+        {% endfor %}
+
+
+      </tbody>
+    </table>
+<script>
+    setInterval(function() {
+                  window.location.reload();
+                }, 300000);
+                </script>
+ </div>
+</div>
+</div>
+    </div>
+  </body>
+</html>

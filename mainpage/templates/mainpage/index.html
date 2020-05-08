@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Home Page</title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" >
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+
+
+
+
+
+
+</body>
+<img style=" width: 100%;height: 95%;position:relative;"src="{% static 'images/bg_9.jpg' %}">
+
+  <h3 style="font-family:'Dancing Script'; font-size: 200%; color:white; position:absolute;top: 5%;left: 50%;width: 100%">
+
+
+  <nav>
+
+
+  <div class="nav nav" id="nav-tab" role="tablist">
+
+     <div class  style=" font-family:'Dancing Script';font-size: 140%; position:absolute;color:blue; border:12px ;left: -40%;">Dastarkhan  </div>
+
+    <a class="nav-item nav-link active text-light " id="nav  ome-tab" data-toggle="tab" href="/main" role="tab" aria-controls="nav-home" aria-selected="true">  Home</a>
+    <a class="nav-item nav-link text-light " id="nav-profile-tab" data-toggle="tab" href="/management" role="tab" aria-controls="nav-profile" aria-selected="false">Menu</a>
+    <a class="nav-item nav-link text-light " id="nav-contact-tab" data-toggle="tab" href="/contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+    <a class="nav-item nav-link text-light " id="nav-userlist-tab" data-toggle="tab" href="/waitlist" role="tab" aria-controls="nav-userlist" aria-selected="false">User list</a>
+    <a class="nav-item nav-link text-red " id="nav-login-tab" data-toggle="tab" href="/api/login/?next=/" role="tab" aria-controls="nav-login" aria-selected="false">log in</a>
+  </div>
+</nav>
+
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active"       id="nav-home"  role="tabpanel" aria-labelledby="nav-home-tab"></div>
+  <div class="tab-pane fade" id="nav-profile"  role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+  <div class="tab-pane fade" id="nav-contact"  role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+  <div class="tab-pane fade" id="nav-userlist" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+</div>
+
+
+    </h3>
+  <h3 style="font-family:'Dancing Script'; font-size: 200%; color:white; position:absolute;top: 56%;left: 40%;width: 100%">
+  <span style="vertical-align: middle;">  <b style="border:2px solid Tomato;font-family:'Dancing Script';top: 50%;left: 70%;font-size: 90%;width:90%">
+      <a href="{% static 'docx/MENU.docx' %}"  download>Download Menu</a> </b></span>
+  </h3>
+  <h3 style="font-family:'Dancing Script'; font-size: 200%; color:white; position:absolute;top: 40%;left: 23%;width: 100%">
+
+   <span style="vertical-align: middle;">
+
+     <b style="font-family:'Dancing Script';top: 50%;left: 50%;font-size: 90%;width:90%">
+     </b> This web-site for any people who love the delicious kazakh's food </span></h3>
+  <h3 style=" font-size: 200%; color:white; position:absolute;top: 35%;left: 42.5%;width: 100%">
+
+   <span style="vertical-align: middle;">
+     <b style="font-family:'Dancing Script';top: 50%;left: 50%;font-size: 90%;width:90%">
+     </b> Welcome</span></h3>
+</html>
+
+

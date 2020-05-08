@@ -1,0 +1,20 @@
+django-admin startproject ProjectName
+python manage.py runserver
+
+python manage.py makemigrations management --empty   #0002
+python manage.py makemigrations management     #0001
+
+python manage.py makemigrations migrate --empty
+
+
+
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py createsuperuser
+
+venv\Include\Scripts\activate
+python manage.py startapp snippets
+
+admin
+password123

@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+
+
+
+</head>
+<!-- Image and text -->
+<nav>
+
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="/main" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="/management" role="tab" aria-controls="nav-profile" aria-selected="false">Menu</a>
+    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="/contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+    <a class="nav-item nav-link" id="nav-userlist-tab" data-toggle="tab" href="/waitlist" role="tab" aria-controls="nav-userlist" aria-selected="false">User list</a>
+  </div>
+</nav>
+
+  <body class="containter">
+  {% if data %}
+
+    <div class="container">
+<div class="row">
+<!--<div class="col-xs-12">
+ <div id="content">-->
+   <h2 class="text-center">MENU</h2>
+   </p>
+   <br>
+  <table class="table table-dark">
+  <thead>
+    <tr>
+          <th scope="col">№</th>
+         <th scope="col">Food Name</th>
+         <th scope="col">Price</th>
+         <th scope="col">Category</th>
+       </tr>
+     </thead>
+     <tbody>
+       {% for item in data %}
+           <tr>
+              <th scope="row">{{item.id}}</th>
+             <td>{{ item.food_name }}</td>
+             <td>{{ item.price}}</td>
+             <td>{{item.category_fk.name}}</td>
+           </tr>
+       {% endfor %}
+     </tbody>
+   </table>
+   <div>
+     <button type="button" class="btn btn-outline-danger">
+    Download
+     </button>
+
+</div>
+</div>
+</div>
+  {% else %}
+
+      <p>No data available.</p>
+
+  {% endif %}
+
+
+
+	
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
+  <script src="{% static 'js/script.js' %}"></script>
+    </div>
+    </div>
+  </body>
+</html>

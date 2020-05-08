@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Title</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootst.." integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+<script src="https://unpkg.com/vue-navigation-bar@1.0.0/dist/vue-navigatio.."></script>
+<link rel="stylesheet" href="https://cdn.lineicons.com/1.0.1/LineIcons.min.css">
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/vue-navigation-bar@1.0.0/dist/vue-navigatio..">
+
+</head>
+<body>
+{% verbatim %}
+
+<div id="app" >
+<p v-if="userProfilePic"><img style="width:110%" :src="userProfilePic" alt=""><a href="#" ></a></p>
+
+<h3 style="font-family:'Dancing Script'; font-size: 200%; color:white; position:absolute;top: 5%;left: 50%;width: 100%">
+
+<div class style=" font-family:'Dancing Script';font-size: 140%; position:absolute;color:blue; border:12px ;left: -40%;">Dastarkhan</div>
+
+<div class="navbar" style=" font-family:'Dancing Script';font-size: 140%; position:absolute;color:blue; border:12px ;left: 40%;">
+<div class="colum">
+
+<div class="home" >
+<i class="lni-home size-md ":class=" { 'lni-tada-effect' : showHome } " id="" @click="showHome = !showHome"></i>
+<h4 v-if="showHome" style="margin-top: 8px; color: #ffff;" :src="home" alt=""> <p v-if="home"></p>
+<a href="/vue" @click="getIm()">Home</a></p> </h4>
+</div>
+
+<div class="check">
+<i class="lni-check-mark-circle size-md" :class=" { 'lni-tada-effect' : showCheck } " id="check" @click="showCheck = !showCheck"></i>
+<h4 v-if="showCheck" style="margin-top: 8px; color: #ffff;" :src="menu" alt=""> <p v-if="menu"></p>
+<a href="/contact" @click="getIm()">Contact</a></p> </h4>
+</div>
+
+<div class="coin">
+<i class="lni-coin size-md" :class=" { 'lni-tada-effect' : showCoin } " id="coin" @click="showCoin = !showCoin"></i>
+<h4 v-if="showCoin" style="margin-top: 8px; color: #ffff;" :src="login" alt=""> <p v-if="login"></p>
+<a href="/api/login/?next=/" @click="getIm()">login</a></p> </h4>
+</div>
+</div>
+</div>
+</h3>
+</div>
+
+
+{% endverbatim %}
+
+<script src="/static/app.js"></script>
+</body>
+</html>
